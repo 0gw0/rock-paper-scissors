@@ -32,7 +32,7 @@ elements = [rock,paper,scissors]
 choice = int(input("Choose 0 for rock 1 for paper and 2 for scissors\n"))
 com_choice = random.randint(0,2)
 
-if (choice not in range(0,1,2)):
+if (choice not in range(0,3)):
     print("you did not draw in. time, you lose")
 else:
     print ('you chose: ' + elements[choice])
