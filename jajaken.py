@@ -25,7 +25,6 @@ scissors = '''
 ---.__(___)
 '''
 
-#Write your code below this line 👇
 import random
 
 elements = [rock,paper,scissors]
@@ -33,12 +32,15 @@ elements = [rock,paper,scissors]
 choice = int(input("Choose 0 for rock 1 for paper and 2 for scissors\n"))
 com_choice = random.randint(0,2)
 
-print ('you chose: ' + elements[choice])
-print ('computer chose: ' + elements[com_choice])
-
-if (choice == com_choice - 1 or (choice == 2 and com_choice == 0)):
-  print("you lose :(")
-elif (choice == com_choice):
-  print("its a draw")
+if (choice not in range(0,1,2)):
+    print("you did not draw in. time, you lose")
 else:
-  print("you win!")
+    print ('you chose: ' + elements[choice])
+    print ('computer chose: ' + elements[com_choice])
+    
+    if (choice == com_choice - 1 or (choice == 2 and com_choice == 0)):
+      print("you lose :(")
+    elif (choice == com_choice):
+      print("its a draw")
+    else:
+      print("you win!")
